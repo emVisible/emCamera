@@ -1,4 +1,4 @@
-# 7_software
+# emCamera
 
 An Electron application with Vue and TypeScript
 
