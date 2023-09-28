@@ -8,12 +8,12 @@ import { createTray } from "./tray";
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 400,
-    height: 400,
+    width: 500,
+    height: 330,
     minHeight: 200,
     minWidth: 200,
-    maxHeight: 600,
-    maxWidth: 600,
+    maxHeight: 700,
+    maxWidth:1000,
     alwaysOnTop: true,
     show: false,
     x: 1200,
@@ -28,7 +28,7 @@ function createWindow(): void {
     },
   });
   if (is.dev) mainWindow.webContents.openDevTools();
-  mainWindow.setAspectRatio(1);
+  mainWindow.setAspectRatio(16/9);
 
   mainWindow.on("ready-to-show", () => {
     mainWindow.show();

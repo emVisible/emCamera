@@ -9,8 +9,17 @@ const { config } = useConfigStore();
 const quit = () => {
   window.api.quit();
 };
-const {drag} = useDrag()
-drag.run()
+const { drag } = useDrag();
+drag.run();
+const handleClick = () => {
+  config.isRound = !config.isRound;
+  if (config.isRound)
+    window.api.resize({ aspectRatio: 1, width: 330, height: 330 });
+  else {
+    window.api.resize({ aspectRatio: 16 / 9, width: 500, height: 330 })
+  };
+};
+config.isRound = false
 </script>
 
 <template>
@@ -34,12 +43,12 @@ drag.run()
           @click="config.page = 'camera'"
         />
         <Halo
-        v-if="config.page == 'camera'"
+          v-if="config.page == 'camera'"
           theme="outline"
           size="24"
           fill="#FFFFFF"
           class="nodrag absolute left-1/2 bottom-5 -translate-x-1/2 cursor-pointer mt-3 z-10 hidden group-hover:block"
-          @click="config.isRound = !config.isRound"
+          @click="handleClick"
         />
       </div>
       <div class="w-full h-full nodrag">

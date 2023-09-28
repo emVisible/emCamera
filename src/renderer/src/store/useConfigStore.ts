@@ -14,7 +14,7 @@ export const useConfigStore = defineStore(
       borderWidth: "8px",
       borderColor: "#f1f2f6",
       borderRadius: "10%",
-      isRound: true,
+      isRound: false,
     });
 
     const updateConfig = () => {

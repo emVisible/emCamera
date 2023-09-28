@@ -7,9 +7,9 @@
     };`"
   >
     <video
-      class="object-cover"
+      class="object-cover flex-1"
       :style="`border-radius: ${config.borderRadius}; border-radius: ${
-        config.isRound ? '50%' : config.borderRadius
+        config.isRound ? '50%' : '0px'
       };`"
     ></video>
   </div>
