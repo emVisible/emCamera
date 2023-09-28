@@ -26,13 +26,12 @@ function createWindow(): void {
       sandbox: false,
     },
   });
-  mainWindow.webContents.openDevTools();
+  if (is.dev) mainWindow.webContents.openDevTools();
   mainWindow.setAspectRatio(1);
 
   mainWindow.on("ready-to-show", () => {
     mainWindow.show();
   });
-
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url);
