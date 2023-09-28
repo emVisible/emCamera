@@ -1,6 +1,10 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
+/*
+  使用pinia进行数据持久化
+*/
+
 export const useConfigStore = defineStore(
   "config",
   () => {

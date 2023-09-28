@@ -4,7 +4,8 @@ declare global {
   interface Window {
     electron: ElectronAPI
     api: {
-      quit: Function
+      quit: Function,
+      drag: Function
     }
   }
 }

@@ -3,11 +3,14 @@ import { CameraOne, Config, Halo } from "@icon-park/vue-next";
 import Camera from "./components/Camera.vue";
 import Settings from "./components/Settings.vue";
 // import useConfig from "./composables/useConfig";
+import useDrag from "./composables/useDrag";
 import { useConfigStore } from "./store/useConfigStore";
 const { config } = useConfigStore();
 const quit = () => {
   window.api.quit();
 };
+const {drag} = useDrag()
+drag.run()
 </script>
 
 <template>

@@ -1,5 +1,9 @@
 import { ref } from "vue";
 
+/*
+  使用浏览器自带的localstorage进行setting的持久化
+*/
+
 type ConfigType = {
   deviceId: string;
   page: string;

@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+// 如若开启, 因为样式冲突, 拖拽只可在settings中进行
 // html {
 //   -webkit-app-region: drag;
 // }
@@ -11,17 +12,18 @@
 // textarea {
 //   -webkit-app-region: no-drag;
 // }
-body,
-.drag {
-  -webkit-app-region: drag;
-  //菜单图标与文字间距
-  --mx-menu-placeholder-width: 10px !important;
-}
 
-.nodrag,
-input,
-select,
-textarea,
-option {
-  -webkit-app-region: no-drag;
-}
+// body,
+// .drag {
+//   -webkit-app-region: drag;
+//   //菜单图标与文字间距
+//   --mx-menu-placeholder-width: 10px !important;
+// }
+
+// .nodrag,
+// input,
+// select,
+// textarea,
+// option {
+//   -webkit-app-region: no-drag;
+// }

@@ -5,6 +5,9 @@ import { electronAPI } from '@electron-toolkit/preload'
 const api = {
   quit(){
     ipcRenderer.send('quitApp')
+  },
+  drag(cord:{x:number, y: number}){
+    ipcRenderer.invoke('dragApp', cord)
   }
 }
 
