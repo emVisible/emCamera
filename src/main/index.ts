@@ -3,6 +3,7 @@ import { BrowserWindow, app, shell } from "electron";
 import { join } from "path";
 import icon from "../../resources/icon.png?asset";
 import "./ipcMain";
+import { createTray } from "./tray";
 
 function createWindow(): void {
   // Create the browser window.
@@ -61,7 +62,9 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window);
   });
 
+
   createWindow();
+  createTray()
 
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the

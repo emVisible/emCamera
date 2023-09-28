@@ -28,7 +28,7 @@ class Drag {
     this.toRender({ x, y });
   }
   public toRender(cord: { x: number; y: number }) {
-    window.api.drag(cord);
+    (window as any).api!.drag(cord);
   }
 }
 export default () => {

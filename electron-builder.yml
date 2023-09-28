@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: 7_software
+appId: com.emVisible.camera
+productName: EMC
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: 7_software
+  executableName: EMC
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

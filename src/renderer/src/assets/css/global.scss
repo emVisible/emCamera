@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  overflow: hidden;
+}
 
 // 如若开启, 因为样式冲突, 拖拽只可在settings中进行
 // html {

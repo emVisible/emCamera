@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-full flex"
+    class="w-full h-full overflow-hidden flex"
     :style="`border:solid ${config.borderWidth} ${config.borderColor};
     border-radius: ${config.borderRadius}; border-radius: ${
       config.isRound ? '50%' : config.borderRadius
